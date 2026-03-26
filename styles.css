@@ -1,0 +1,279 @@
+:root {
+  --bg: #0f1220;
+  --panel: #171a2b;
+  --soft: #1f2440;
+  --text: #e9ecff;
+  --muted: #b7bfdc;
+  --accent: #7b8dff;
+  --accent-2: #4de2d2;
+  --max: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  background: radial-gradient(circle at 10% 10%, #1c2142 0%, var(--bg) 45%);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: min(var(--max), 92vw);
+  margin-inline: auto;
+}
+
+.hero {
+  padding: 1.2rem 0 4rem;
+  min-height: 88vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1.4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--text);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+.hero-content {
+  margin-top: 7rem;
+  max-width: 700px;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin: 0.2rem 0 1rem;
+  line-height: 1.12;
+}
+
+h1 span {
+  color: var(--accent);
+}
+
+.intro {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hero-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.72rem 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent), #93a2ff);
+  color: #10132a;
+}
+
+.btn-ghost {
+  border: 1px solid #4e567e;
+  color: var(--text);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.section-head h2,
+h2 {
+  margin: 0.2rem 0 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid #2a3158;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.thumb {
+  height: 170px;
+}
+
+.gradient-1 {
+  background: linear-gradient(120deg, #ffd166, #ef476f);
+}
+
+.gradient-2 {
+  background: linear-gradient(120deg, #00c9a7, #845ec2);
+}
+
+.gradient-3 {
+  background: linear-gradient(120deg, #72ddf7, #8093f1);
+}
+
+.gradient-4 {
+  background: linear-gradient(120deg, #f9f871, #ff9671);
+}
+
+.card-body {
+  padding: 1rem 1rem 1.2rem;
+}
+
+.card-body p,
+#about p,
+.service-list p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card-body span {
+  color: #a4afdd;
+  font-size: 0.9rem;
+}
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stats li {
+  background: var(--soft);
+  border: 1px solid #31375f;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.stats strong {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.stats span {
+  color: var(--muted);
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.service-list article {
+  background: var(--panel);
+  border: 1px solid #2a3158;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.footer {
+  border-top: 1px solid #2c3358;
+  padding: 2.4rem 0 3rem;
+  margin-top: 2rem;
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .grid,
+  .about-wrap,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+    z-index: 10;
+  }
+
+  .menu {
+    position: absolute;
+    top: 56px;
+    right: 4vw;
+    background: #1a1f3b;
+    border: 1px solid #303866;
+    border-radius: 12px;
+    flex-direction: column;
+    padding: 0.8rem;
+    display: none;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .hero-content {
+    margin-top: 4rem;
+  }
+}
