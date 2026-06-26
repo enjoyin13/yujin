@@ -1,0 +1,11 @@
+{
+  "name": "ai-image-loading-preview",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一个纯 HTML/CSS 的 AI 生图加载动效预览。",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "start": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "preview": "python3 -m http.server 3000 --bind 0.0.0.0"
+  }
+}
